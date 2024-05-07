@@ -5,11 +5,11 @@ import pandas as pd
 conn = sqlite3.connect('rohith.sqlite')
 
 # Load CSV files into pandas DataFrames
-df = pd.read_csv("C:/Users/rohith.mukkamula/Downloads/Global/Customers.csv", encoding='ISO-8859-1')
-df1 = pd.read_csv("C:/Users/rohith.mukkamula/Downloads/Global/Sales.csv", encoding='ISO-8859-1')
-df2 = pd.read_csv("C:/Users/rohith.mukkamula/Downloads/Global/Exchange_rates.csv", encoding='ISO-8859-1')
-df3 = pd.read_csv("C:/Users/rohith.mukkamula/Downloads/Global/Products.csv", encoding='ISO-8859-1')
-df4 = pd.read_csv("C:/Users/rohith.mukkamula/Downloads/Global/Stores.csv", encoding='ISO-8859-1')
+df = pd.read_csv("https://github.com/RohithMukkamula/DataBase/blob/main/Customers.csv", encoding='ISO-8859-1')
+df1 = pd.read_csv("https://github.com/RohithMukkamula/DataBase/blob/main/Sales.csvv", encoding='ISO-8859-1')
+df2 = pd.read_csv("https://github.com/RohithMukkamula/DataBase/blob/main/Exchange_rates.csv", encoding='ISO-8859-1')
+df3 = pd.read_csv("https://github.com/RohithMukkamula/DataBase/blob/main/Products.csv", encoding='ISO-8859-1')
+df4 = pd.read_csv("https://github.com/RohithMukkamula/DataBase/blob/main/Stores.csv", encoding='ISO-8859-1')
 
 # Write DataFrames to SQLite tables
 df.to_sql('Customers', conn, if_exists='replace', index=False)
